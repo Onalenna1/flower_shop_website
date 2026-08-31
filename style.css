@@ -1,0 +1,355 @@
+/* Color Palette & Variables */
+:root {
+    --primary-pink: #d87093;
+    --light-pink: #fff0f3;
+    --accent-green: #2e5a44;
+    --text-dark: #2c2c2c;
+    --bg-color: #faf9f6;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+    background: var(--white);
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-pink);
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--primary-pink);
+}
+
+.btn-nav {
+    background: var(--light-pink);
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    color: var(--primary-pink) !important;
+}
+
+/* Big Hero Picture Section (First Page View) */
+.hero-large {
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1508615039623-a25605d2b022?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content-large {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero-content-large h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-content-large p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn-primary {
+    background: var(--primary-pink);
+    color: var(--white);
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: #c25b7d;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.btn-secondary:hover {
+    background: var(--white);
+    color: var(--text-dark);
+}
+
+/* Catalog Section */
+.catalog {
+    padding: 5rem 0;
+}
+
+.catalog h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--accent-green);
+}
+
+.section-subtitle {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #666;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: var(--transition);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 1.2rem;
+}
+
+.product-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+    color: var(--accent-green);
+}
+
+.description {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 1rem;
+    height: 2.6rem;
+    overflow: hidden;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-pink);
+}
+
+.btn-buy {
+    background: var(--accent-green);
+    color: var(--white);
+    border: none;
+    padding: 0.4rem 0.9rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.btn-buy:hover {
+    background: #1f3c2f;
+}
+
+/* About Section */
+.about {
+    background: var(--light-pink);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.about-text h2 {
+    color: var(--primary-pink);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.about-text p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #555;
+}
+
+/* Contact Section Styling */
+.contact-section {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.contact-section h2 {
+    text-align: center;
+    color: var(--accent-green);
+    font-size: 2.5rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: var(--bg-color);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.form-group input, 
+.form-group textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: var(--transition);
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: var(--primary-pink);
+}
+
+/* Footer */
+.footer {
+    background: var(--accent-green);
+    color: var(--white);
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer h3, .footer h4 {
+    margin-bottom: 1rem;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #ddd;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 1.5rem;
+    font-size: 0.8rem;
+    color: #ccc;
+}
